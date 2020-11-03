@@ -1,0 +1,40 @@
+html {
+  background-image: url("./image-background.jpg");
+  background-size: cover;
+}
+
+.keys {
+  display: flex;
+  justify-content: center; /*center horizontal*/
+  align-items: center; /*center vertical - funguje jen v kombinaci se stanovením výšky na 100vh*/
+  min-height: 100vh;
+}
+
+.key {
+  border: 3px white solid;
+  border-radius: 5%;
+  background: rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  width: 90px;
+  color: white;
+  text-align: center;
+  transition: all 0.1s ease;
+}
+
+.playing {
+  transform: scale(1.2);
+  border-color: black;
+  box-shadow: 0 0 2px black;
+  color: black;
+}
+
+kbd {
+  font-size: 35px;
+  display: block;
+  font-family: serif;
+}
+
+.sound {
+  font-size: 25px;
+  font-family: "Sacramento", cursive;
+}
