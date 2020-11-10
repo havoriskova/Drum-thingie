@@ -1,13 +1,14 @@
-html {
+.container {
   background-image: url("./image-background.jpg");
   background-size: cover;
+  margin: 0 auto;
 }
 
 .keys {
-  display: flex;
   justify-content: center; /*center horizontal*/
   align-items: center; /*center vertical - funguje jen v kombinaci se stanovením výšky na 100vh*/
   min-height: 100vh;
+  max-width: content;
 }
 
 .key {
@@ -32,6 +33,7 @@ kbd {
   font-size: 35px;
   display: block;
   font-family: serif;
+  background-color: transparent;
 }
 
 .sound {

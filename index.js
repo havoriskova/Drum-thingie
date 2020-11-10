@@ -5,7 +5,7 @@ function playSound(e) {
 
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
         console.log(audio); // this shows the selected audio-element
-    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`); //this is for the styling
 
     if (!audio) return; // = if there´s no audio (null), the function stops running
     
@@ -24,3 +24,23 @@ function removeTransition(e) { // for CSS changing
 const keys = document.querySelectorAll(`.key`);
 keys.forEach(key => key.addEventListener(`transitionend`, removeTransition));
 window.addEventListener(`keydown`, playSound);
+
+
+
+
+function play(e){
+console.log(this.dataset.key);
+const number = this.dataset.key;
+
+const audio = document.querySelector(`audio[data-key="${number}"]`);
+
+const key = document.querySelector(`.key[data-key="${number}"]`);
+
+
+audio.currentTime=0;
+audio.play(); 
+key.classList.add(`playing`);
+
+}
+
+keys.forEach(key=> key.addEventListener(`click`, play));
