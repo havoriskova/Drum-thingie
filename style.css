@@ -40,3 +40,9 @@ kbd {
   font-size: 25px;
   font-family: "Sacramento", cursive;
 }
+
+@media screen and (max-width: 472px) {
+  .container {
+    max-width: 380px;
+  }
+}
