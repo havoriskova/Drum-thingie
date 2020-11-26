@@ -1,24 +1,37 @@
-.container {
+body {
   background-image: url("./image-background.jpg");
   background-size: cover;
-  margin: 0 auto;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /*center horizontal*/
+  align-items: center; /*center vertical - funguje jen v kombinaci se stanovením výšky na 100vh*/
+  height: 90%;
 }
 
 .keys {
+  display: flex;
   justify-content: center; /*center horizontal*/
   align-items: center; /*center vertical - funguje jen v kombinaci se stanovením výšky na 100vh*/
-  min-height: 100vh;
-  max-width: content;
+  margin: auto 10%;
+  flex-wrap: wrap;
 }
 
 .key {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   border: 3px white solid;
   border-radius: 5%;
   background: rgba(0, 0, 0, 0.2);
   margin: 10px;
-  width: 90px;
+  min-width: 76px;
+  min-height: 76px;
   color: white;
   text-align: center;
+  align-items: center;
   transition: all 0.1s ease;
 }
 
@@ -31,7 +44,6 @@
 
 kbd {
   font-size: 35px;
-  display: block;
   font-family: serif;
   background-color: transparent;
 }
@@ -41,8 +53,26 @@ kbd {
   font-family: "Sacramento", cursive;
 }
 
-@media screen and (max-width: 472px) {
-  .container {
-    max-width: 380px;
+@media screen and (max-width: 1185px) {
+  .keys {
+    margin: auto 30%;
+  }
+  .key {
+    margin: 20px;
+    width: calc(33.333333% - 46px);
+    height: calc(33.333333% - 46px);
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .keys {
+    margin: auto 10%;
+    height: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .keys {
+    margin: 0;
   }
 }
